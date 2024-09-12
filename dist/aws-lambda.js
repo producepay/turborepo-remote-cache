@@ -1,7 +1,0 @@
-import awsLambdaFastify from '@fastify/aws-lambda';
-import { createApp } from './app.js';
-const app = createApp({
-    trustProxy: true,
-});
-export const handler = awsLambdaFastify(app, { enforceBase64: (_) => true });
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXdzLWxhbWJkYS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL3NyYy9hd3MtbGFtYmRhLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sZ0JBQWdCLE1BQU0scUJBQXFCLENBQUE7QUFDbEQsT0FBTyxFQUFFLFNBQVMsRUFBRSxNQUFNLFVBQVUsQ0FBQTtBQUVwQyxNQUFNLEdBQUcsR0FBRyxTQUFTLENBQUM7SUFDcEIsVUFBVSxFQUFFLElBQUk7Q0FDakIsQ0FBQyxDQUFBO0FBRUYsTUFBTSxDQUFDLE1BQU0sT0FBTyxHQUFHLGdCQUFnQixDQUFDLEdBQUcsRUFBRSxFQUFFLGFBQWEsRUFBRSxDQUFDLENBQUMsRUFBRSxFQUFFLENBQUMsSUFBSSxFQUFFLENBQUMsQ0FBQSJ9

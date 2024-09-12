@@ -54,6 +54,9 @@ jspm_packages
 # dotenv environment variables file
 .env
 
+# Compiled app
+dist
+
 # TAP files
 out.tap
 junit-testresults.xml
