@@ -1,0 +1,11 @@
+import { statusRouteSchema } from './status-schema.js';
+export const getStatus = {
+    method: 'GET',
+    url: '/artifacts/status',
+    schema: statusRouteSchema,
+    logLevel: 'error',
+    async handler(req, reply) {
+        reply.send({ status: 'enabled' });
+    },
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2V0LXN0YXR1cy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NyYy9wbHVnaW5zL3JlbW90ZS1jYWNoZS9yb3V0ZXMvZ2V0LXN0YXR1cy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFPQSxPQUFPLEVBQUUsaUJBQWlCLEVBQUUsTUFBTSxvQkFBb0IsQ0FBQTtBQUV0RCxNQUFNLENBQUMsTUFBTSxTQUFTLEdBUWxCO0lBQ0YsTUFBTSxFQUFFLEtBQUs7SUFDYixHQUFHLEVBQUUsbUJBQW1CO0lBQ3hCLE1BQU0sRUFBRSxpQkFBaUI7SUFDekIsUUFBUSxFQUFFLE9BQU87SUFDakIsS0FBSyxDQUFDLE9BQU8sQ0FBQyxHQUFHLEVBQUUsS0FBSztRQUN0QixLQUFLLENBQUMsSUFBSSxDQUFDLEVBQUUsTUFBTSxFQUFFLFNBQVMsRUFBRSxDQUFDLENBQUE7SUFDbkMsQ0FBQztDQUNGLENBQUEifQ==

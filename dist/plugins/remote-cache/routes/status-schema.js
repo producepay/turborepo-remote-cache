@@ -1,0 +1,8 @@
+import { Type } from '@sinclair/typebox';
+const querystring = Type.Object({}, { additionalProperties: false });
+const params = Type.Object({}, { additionalProperties: false });
+export const statusRouteSchema = {
+    querystring,
+    params,
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3RhdHVzLXNjaGVtYS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NyYy9wbHVnaW5zL3JlbW90ZS1jYWNoZS9yb3V0ZXMvc3RhdHVzLXNjaGVtYS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQVUsSUFBSSxFQUFFLE1BQU0sbUJBQW1CLENBQUE7QUFFaEQsTUFBTSxXQUFXLEdBQUcsSUFBSSxDQUFDLE1BQU0sQ0FBQyxFQUFFLEVBQUUsRUFBRSxvQkFBb0IsRUFBRSxLQUFLLEVBQUUsQ0FBQyxDQUFBO0FBR3BFLE1BQU0sTUFBTSxHQUFHLElBQUksQ0FBQyxNQUFNLENBQUMsRUFBRSxFQUFFLEVBQUUsb0JBQW9CLEVBQUUsS0FBSyxFQUFFLENBQUMsQ0FBQTtBQUcvRCxNQUFNLENBQUMsTUFBTSxpQkFBaUIsR0FBRztJQUMvQixXQUFXO0lBQ1gsTUFBTTtDQUNQLENBQUEifQ==
