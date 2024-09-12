@@ -1,5 +1,4 @@
-import aws from 'aws-sdk'
-import type { S3 } from 'aws-sdk'
+import { S3, S3ClientConfig } from '@aws-sdk/client-s3'
 import s3 from 's3-blob-store'
 
 export interface S3Options {
@@ -8,7 +7,7 @@ export interface S3Options {
   region?: string
   endpoint?: string
   bucket: string
-  s3OptionsPassthrough?: S3.ClientConfiguration
+  s3OptionsPassthrough?: S3ClientConfig
 }
 
 // AWS_ envs are default for aws-sdk
@@ -20,7 +19,7 @@ export function createS3({
   endpoint,
   s3OptionsPassthrough = {},
 }: S3Options) {
-  const client = new aws.S3({
+  const client = new S3({
     ...(accessKey && secretKey
       ? {
           credentials: {
@@ -30,11 +29,14 @@ export function createS3({
           },
         }
       : {}),
+
     ...(region ? { region } : {}),
-    ...(endpoint ? { endpoint: new aws.Endpoint(endpoint) } : {}),
+    ...(endpoint ? { endpoint } : {}),
+
     ...(process.env.NODE_ENV === 'test'
       ? { sslEnabled: false, s3ForcePathStyle: true }
       : {}),
+
     ...s3OptionsPassthrough,
   })
 

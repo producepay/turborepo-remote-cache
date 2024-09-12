@@ -21,8 +21,7 @@
     "turborepo-remote-cache": "./dist/cli.js"
   },
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
-    "prebuild": "pnpm lint && rimraf ./dist",
+    "prebuild": "npm run lint && rimraf ./dist",
     "build": "tsc -p ./tsconfig.json",
     "build:docker": "tsc -p ./tsconfig.json",
     "start": "node --enable-source-maps dist/index.js",
@@ -38,20 +37,20 @@
     "semantic-release": "semantic-release",
     "commit": "npx git-cz",
     "prepare": "husky install",
-    "check-updates": "pnpm outdated --recursive --long"
+    "check-updates": "npm outdated --recursive --long"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ducktors/turborepo-remote-cache.git"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "3.626.0",
     "@azure/storage-blob": "^12.23.0",
     "@fastify/aws-lambda": "^3.2.0",
     "@google-cloud/storage": "6.9.2",
     "@hapi/boom": "10.0.0",
     "@sinclair/typebox": "0.25.21",
     "ajv": "8.12.0",
-    "aws-sdk": "2.1310.0",
     "close-with-grace": "1.1.0",
     "env-schema": "5.2.0",
     "fastify": "4.12.0",
@@ -107,7 +106,7 @@
     "dist",
     "vercel.json"
   ],
-  "pnpm": {
+  "npm": {
     "overrides": {
       "xml2js@<0.5.0": ">=0.5.0",
       "semver@>=7.0.0 <7.5.2": ">=7.5.2",
